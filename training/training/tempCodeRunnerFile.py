@@ -1,0 +1,7 @@
+ self.tab1Frame2_frame2.configure(width=500,height=500)
+        self.figure1 = plt.Figure(figsize=(10,4), dpi=80)
+        self.t=np.arange(0,5,0.1)
+        self.ax1 = self.figure1.add_subplot().plot(self.t,2*np.sin(np.pi*self.t)) 
+        self.line1 = FigureCanvasTkAgg(self.figure1, self.tab1Frame2_frame2)
+        self.line1.draw()
+        self.line1.get_tk_widget().pack()
